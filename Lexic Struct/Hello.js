@@ -34,4 +34,60 @@ book["fat"] // => true: another way to access property values.
 book.author = "Flanagan"; // Create new properties via assignment. 
 book.contents = {}; // Its a empty object without any properties.
 
+// JavaScript also accepts arrays (numerically indexed lists) of values.
+var primes = [2, 3, 5, 7]; // An array of 4 values, delimited with "[  ]".
+primes[0]   // => 2: The primary element (index 0) of Array.
+primes.length // => 4: Elements quantities in Array.
+primes[primes.length - 1]; // => 7: The last element of the Array.
+primes[4] = 9; // => 9: Add a new element through assignment.
+primes[4] = 11 // => 11: Or modify existing elements through assignment.
+var empty = []; // [] => It's an Empty Array, without any element.
+empty.length // => 0
 
+// The objects and Arrays can be contain another Arrays and objects.
+
+var points = [ // An Array with two elements.
+  { x: 0, y: 0 }, // Each elements is an Object.
+  { x: 1, y: 1 }
+];
+
+var data = { // An Object with two properties
+  trial1: [[1, 2], [3, 4]], // The value of each property is an Array.
+  trial2: [[2, 3], [4, 5]] // The elements of Arrays are Arrays.
+};
+
+// Operators act on values ​​(operands) to produce a new value.
+// Arithmetic operators are the most common:
+3 + 2 // => 5: Addition.
+3 - 2 // => 1: Subtraction.
+3 * 2 // => 6: Multiplication. 
+3 / 2 // => 1.5: Division.
+points[1].x - points[0].x // => 1: More complicated operands also work.
+"3" + "2" // => "32": + Adds numbers, or concatenates Strings.
+
+// JavaScript defines some arithmetic operators in shorthand form.
+var count = 0; // => Define a variable.
+count++ // => Increments a Variable.
+count-- // => Decrements a Variable.
+count += 2 // => Adds 2: The same that count = count + 2;
+count *= 3 // => Multiply by 3: The same that count = count * 3;
+count // => 6: Variable names are also expressions.
+
+// The iguality and relational operators testing if two values are equals,
+// unequal, less than, greater than, etc. Evaluate as true or false.
+var x = 2, y = 3; // These signs = Are attributions and not a testings of equality
+
+x == y // => false: Equality.
+x != y // => true: Inequality.
+x < y // => true: Less than.
+x > y // => false: Greater than.
+x <= y // => true: Less than or equal to.
+x >= y // => false: Greater than or equal to.
+"two" == "three" // => false: This Strings are differents.
+"two" > "three" // => true: "tw" is alphabetically greater than "th".
+false == (x > y) // true: false is equal to false.
+
+  // Logical operators combine or invert boolean values.
+  (x == 2) && (y == 3) // => true: The both comparacions are true.
+    (x > 3) || (y < 3)  // => false: None of comparacions are true.
+!(x == y)  // => true: ! invert boolean value.
