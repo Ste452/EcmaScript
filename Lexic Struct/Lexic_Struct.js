@@ -91,3 +91,37 @@ false == (x > y) // true: false is equal to false.
   (x == 2) && (y == 3) // => true: The both comparacions are true.
     (x > 3) || (y < 3)  // => false: None of comparacions are true.
 !(x == y)  // => true: ! invert boolean value.
+
+// Functions are code blocks in JavaScript parameterized that we can call.
+
+function plus1(x) { // Define a function called "plus1", with parameter "x"
+  return x + 1; // Returns a value one unit greater than what was passed
+} // Functions are enclosed in curly braces
+
+plus1(y); // => 4: y is 3; Therefore, this called return 3+1
+
+var square = function (x) { // Functions are values ​​and can be assigned to variables
+  return x * x; // Calculates the function value.
+}; // A semicolon marks the end of the assignment.
+
+square(plus(y)) // => 16: Call two functions in one expression
+
+// When functions receive the properties of an object, we call them "methods". All JavaScript objects have methods:
+
+var a = []; // Creates an empty array
+a.push(1, 2, 3); // The push() method adds elements to an array
+a.reverse(); // Another method: reverses the order of the elements
+
+// We can also define our own methods. The word-key "this" refer for object
+// In which the method is define: In that caso, the points array before.
+
+points.dist = function () { // Define method to calculate the distance between points
+
+  var p1 = this[0]; // Fist element that we call.
+  var p2 = this[1]; // Second element  of "this" object.
+  var a = p2.x - p1.x; // Difference in x coordinate.
+  var b = p2.y - p1.y; // Difference in y coordinate.
+  return Math.sqrt(a * a + b * b); // Pythagoras theorem; Math.sqrt() calculates square root.
+};
+
+points.dist() // => 1,1414: Distance between our two points 
