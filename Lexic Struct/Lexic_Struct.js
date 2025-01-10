@@ -125,3 +125,13 @@ points.dist = function () { // Define method to calculate the distance between p
 };
 
 points.dist() // => 1,1414: Distance between our two points 
+
+// Functions are included conditional ties that utilize sintaxe of languages C, C++, Java and more.
+function abs(x) {
+  if (x >= 0) {
+    return x;
+  } else {
+    return -x;
+  }
+
+}
