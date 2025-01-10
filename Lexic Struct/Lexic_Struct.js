@@ -127,11 +127,31 @@ points.dist = function () { // Define method to calculate the distance between p
 points.dist() // => 1,1414: Distance between our two points 
 
 // Functions are included conditional ties that utilize sintaxe of languages C, C++, Java and more.
-function abs(x) {
-  if (x >= 0) {
-    return x;
-  } else {
+function abs(x) { // One function to calculate the absolute value
+  if (x >= 0) { // An if instrution...
+    return x; // Executes this code, if the comparation is true
+  } // This is the end of the if clause
+  else { // Optional clause else executes your code if the comparation being false
     return -x;
-  }
+  } // Braces are optional when there is 1 statement per clause
+} // Note that instrutions return are nested within if/else
 
+function factorial(n) { // Function to calculate factorials
+  var product = 1; // Starts  with product of 1
+  while (n > 1) { // Repeat the instrutions that they are in braces {}, while the expresssion in () being true
+    product *= n; // Shortcut for product = product * n;
+    n--; // Shortcut for n = n - 1;
+  } // End of tie
+  return product; // Returns the product
 }
+
+factorial(4); // => 24: 4*3*2*1
+
+function factorial2(n) { // Another version, using a different tie
+  var i, product = 1;  // Starts with 1
+  for (i = 2; i <= n; i++) // Increments i automatically, of 2 until n
+    product *= 1; // Do this every time. {} not necessarelly for ties of 1 line
+  return product; // Returns the factorial
+}
+
+factorial2(5) // => 120: 5*4*3*2*1
