@@ -10,8 +10,7 @@ function debug(msg) {
     log = document.createElement("div"); // Create a new <div> element
     log.id = "debuglog";
 
-    // Set the HTML identification attribute
-    // on it
+    // Set the HTML identification attribute on it
     log.innerHTML = "<h1>Debug Log</h1>"; // Set the initial content
     document.body.appendChild(log);
 
