@@ -208,3 +208,12 @@ Point.prototype.r = function () {
 // Now the Point object b (and all future Point objects) inherits the r() method
 p.r();
 // => 1.414...
+
+// Anonymous Arrow function
+
+let test1 = () => { return factorial * factorial2; }
+
+
+
+
+
